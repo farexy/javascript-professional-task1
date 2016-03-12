@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Buble Sort</title>
+    <link rel="STYLESHEET" type="text/css" href="StyleSheet.css">
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script><!-- подключаем стили Mocha, для отображения результатов -->
+    
+</head>
+<body>
+<form name="form">
+    <input id="values" type="text" name="values" placeholder="Введите элементы массива через пробел"/>
+    <input class="button" id="button" type="button" name="button" onclick="makeArray()" value="Создать массив"/>
+</form>
+<div id="container" width="800" height="300"></div>
+    <button id="reset" class="button" onclick="resetArray()">Сброс</button>
+<button id="nextStep" class="button" onclick="nextStep()">Следующий шаг</button>
+    <button id ="test" class="button" onclick="mocha.run()">Test!</button>
+<div id="mocha"></div>
+    <script type="text/JavaScript" src="scripts/tests.js" charset="UTF-8"></script>
+    <script type="text/JavaScript" src="scripts/view.js" charset="UTF-8"></script>
+    <script type="text/JavaScript" src="scripts/model.js" charset="UTF-8"></script>
+<script type="text/JavaScript" src="scripts/controller.js" charset="UTF-8"></script>
+    
+</body>
+</html>
